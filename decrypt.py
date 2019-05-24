@@ -24,7 +24,7 @@ def decrypt(key, filename):
 def getKey(password):
             hasher = SHA256.new(password.encode('utf-8'))
             return hasher.digest()
-filename = raw_input("Enter filename")
-password = raw_input("Enter password")
+filename = raw_input("Enter filename: ")
+password = raw_input("Enter password: ")
 key = getKey(password)
 decrypt(key,filename)
